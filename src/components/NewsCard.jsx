@@ -33,9 +33,14 @@ const NewsCard = (props = {}) => {
       />
 
       {/* Details */}
-      <p className="text-gray-700 text-sm mb-4">
+      <p className="text-gray-700 text-sm">
         {news.details.slice(0, 150)}...{" "}
-        <span className="text-primary">Read More</span>
+        <details className="collapse bg-base-200">
+  <summary className="collapse-title text-primary">Read More</summary>
+  <div className="collapse-content">
+    <p> {news.details}</p>
+  </div>
+</details>
       </p>
 
       {/* Ratings and Views */}
